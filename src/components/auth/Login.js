@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import {Link} from 'react-router-dom';
 
 
 
@@ -21,12 +21,20 @@ const Login = () => {
         });
     }
 
+    const onSubmit = (e) => {
+        e.preventDefault();
+
+
+    }
+    
     return ( 
         <div className="form-usuario">
             <div className="contenedor-form sombra-dark">
                 <h1>Iniciar Sesión</h1>
 
-                <form>
+                <form
+                    onSubmit={onSubmit}
+                >
                     <div className="campo-form">
                         <label htmlFor="correo">Correo</label>
                         <input
@@ -57,6 +65,9 @@ const Login = () => {
                         />
                     </div>
                 </form>
+                <Link to="/nueva-cuenta" className="enlace-cuenta">
+                    Obtener Cuenta
+                </Link>
             </div>
         </div>
     );
