@@ -1,6 +1,6 @@
 import React from 'react'
 import NuevoProyecto from '../proyectos/NuevoProyecto';
-import ListadoProyecto from '../proyectos/ListadoProyecto';
+import ListadoProyecto from '../proyectos/ListadoProyectos';
 
 
 const Sidebar = () => {
