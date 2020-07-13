@@ -30,7 +30,7 @@ const TareaState = (props) => {
             dispatch({
                 type: TAREAS_PROYECTO,
                 payload: respuesta.data.tareas
-            })
+            });
         } catch (error) {
             console.log(error);
         }
@@ -75,6 +75,7 @@ const TareaState = (props) => {
     const actualizarTarea = async tarea => {
         try {
             const respuesta = await clienteAxios.put(`/api/tareas/${tarea.id}`, tarea);
+            console.log(respuesta);
             dispatch({
                 type: ACTUALIZAR_TAREA,
                 payload: respuesta.data.tarea
